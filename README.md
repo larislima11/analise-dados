@@ -2,7 +2,7 @@
 
 Este projeto apresenta atividades de **Business Intelligence** (BI) e **Data Mining** desenvolvidas durante as aulas do Centro Universitário Facens. Ele inclui a implementação de técnicas para análise, exploração de dados e visualização de padrões em conjuntos de dados.
 
-## 🚀 Objetivos do Projeto
+## Objetivos do Projeto
 
 - Demonstrar a aplicação de técnicas de **Data Mining**.
 - Explorar padrões e tendências nos dados para suporte à tomada de decisão.
