@@ -15,7 +15,7 @@ Este projeto apresenta atividades de **Business Intelligence** (BI) e **Data Min
 * **Base de Dados:** [Mall Customers Dataset](https://www.kaggle.com/datasets/vjchoudhary7/customer-segmentation-tutorial-in-python)
 * **Técnica Utilizada:** Regras de Associação.
 
-* <img width="584" height="446" alt="image" src="https://github.com/user-attachments/assets/ef1820e2-7f10-4f80-b906-4c06fb894869" />
+ <img width="584" height="446" alt="image" src="https://github.com/user-attachments/assets/ef1820e2-7f10-4f80-b906-4c06fb894869" />
 
 * **Análise e Modelo:**
     * **Engenharia de Dados:** Criamos variáveis categóricas para faixa etária e grupo de renda, facilitando a segmentação e análise dos clientes.
@@ -34,7 +34,7 @@ Este projeto apresenta atividades de **Business Intelligence** (BI) e **Data Min
 
 <img width="459" height="403" alt="image" src="https://github.com/user-attachments/assets/7b9e91a3-69a8-4ad1-a53d-94e6e9168af6" />
 
- **Análise e Modelo:**
+ * **Análise e Modelo:**
     * **Engenharia de Dados:** Realizamos a separação clara entre variáveis preditoras e a variável alvo (`Outcome`).
     * **Divisão de Dados:** Os dados foram divididos em conjuntos de treino (80%) e teste (20%) para garantir a robustez e a validação do modelo.
     * **Treinamento e Avaliação:** O modelo Random Forest foi treinado e sua performance avaliada por **acurácia** e **matriz de confusão**, oferecendo uma visão detalhada dos verdadeiros positivos, falsos positivos e falsos negativos.
@@ -54,18 +54,6 @@ Este projeto apresenta atividades de **Business Intelligence** (BI) e **Data Min
   - `matplotlib`, `seaborn` - Visualização de dados.
   - `scikit-learn` - Modelos de aprendizado de máquina.
 - **Jupyter Notebook**: Ambiente para desenvolvimento e execução do código.
-
-  ## 📊 Principais Resultados
-
-### Análise de Shopping Centers
-
-* **Descoberta de padrões comportamentais** que levaram a uma clara segmentação de clientes (ex: clientes de alto gasto e baixa frequência; clientes com orçamento limitado e frequência alta).
-* **Geração de visualizações gráficas perspicazes** que destacam grupos de clientes distintos, fornecendo insights acionáveis para campanhas de marketing direcionadas.
-
-### Previsão de Diabetes
-
-* **Desenvolvimento de um modelo robusto de aprendizado de máquina** para previsão de diabetes, demonstrando métricas de desempenho sólidas (acurácia, precisão).
-* **Criação de gráficos explicativos** para interpretar os resultados da classificação e o desempenho do modelo, mostrando o poder preditivo do modelo.
 
 ## Como Executar o Projeto
 
