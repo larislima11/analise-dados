@@ -17,6 +17,20 @@ Este projeto apresenta atividades de **Business Intelligence** (BI) e **Data Min
 
  <img width="584" height="446" alt="image" src="https://github.com/user-attachments/assets/ef1820e2-7f10-4f80-b906-4c06fb894869" />
 
+ * **O que o gráfico representa?**
+            * **Linhas (Antecedents):** Cada linha representa um conjunto de categorias precursoras em uma regra de associação.
+            * **Colunas (Consequents):** Cada coluna representa os itens que foram identificados como consequências nos padrões associados.
+            * **Cores e Anotações (Lift):** A intensidade da cor e os valores numéricos indicam o valor do *lift*. Valores mais altos de *lift* (cores mais intensas) sugerem que os itens nos antecedentes têm maior probabilidade de ocorrer em conjunto com os itens nos consequentes do que seria esperado ao acaso.
+        * **Relação com os dados:** O gráfico demonstra como categorias como faixa etária (`Age_Group`), gênero (`Genre`) e faixa de renda (`Income_Group`) estão relacionadas. Por exemplo, se um antecedente como "Adulto" está associado a um consequente como "Alta Renda" com um *lift* alto, isso indica que a ocorrência de clientes adultos em conjunto com alta renda é mais frequente do que seria por acaso.
+        * **Interpretação Prática:**
+            * **Segmentação de clientes:** O gráfico pode ser usado para identificar grupos específicos de clientes que apresentam comportamentos semelhantes (ex: "Jovens Adultos" e "Média Renda" podem aparecer frequentemente associados).
+            * **Ações de marketing:** Empresas podem usar esses padrões para criar campanhas direcionadas, oferecendo produtos específicos para grupos demográficos mais propensos a comprá-los.
+            * **Decisões estratégicas:** Se certos grupos não estão fortemente associados, pode ser um indicativo de que é necessário explorar estratégias para atrair esses segmentos.
+        * **Benefício do uso do Heatmap:** O heatmap apresenta as associações de maneira intuitiva e visual, facilitando a identificação de relações significativas entre variáveis categóricas dos dados. Ele é especialmente útil quando o número de regras geradas é grande, pois fornece uma visão geral condensada dos padrões mais importantes.
+    * **Distribuição por Gênero e Renda:** Gráficos de pizza para uma visão rápida da proporção de clientes por gênero e nos diferentes grupos de renda.
+    * **Renda por Faixa Etária:** Histograma ou gráfico de barras mostrando a distribuição da renda em cada faixa etária.
+* **Insights Gerados:** Esta análise permite exibir quais grupos de clientes têm maior probabilidade de se relacionar em termos de faixa etária e renda, fornecendo **insights estratégicos** para personalizar campanhas de marketing e otimizar a experiência do cliente.
+
 * **Análise e Modelo:**
     * **Engenharia de Dados:** Criamos variáveis categóricas para faixa etária e grupo de renda, facilitando a segmentação e análise dos clientes.
     * **Regras de Associação:** Utilizamos o algoritmo **Apriori** para transformar os dados e identificar conjuntos de itens frequentes. Posteriormente, geramos regras de associação com base na métrica de *lift*, revelando combinações de categorias que ocorrem juntas com maior probabilidade (ex: "clientes jovens com renda média tendem a comprar X e Y").
