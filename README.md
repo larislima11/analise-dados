@@ -56,6 +56,38 @@ Este projeto apresenta atividades de **Business Intelligence** (BI) e **Data Min
 
 <img width="459" height="403" alt="image" src="https://github.com/user-attachments/assets/7b9e91a3-69a8-4ad1-a53d-94e6e9168af6" />
 
+* **Matriz de Confusão:** Representação visual da performance do modelo, essencial para entender os erros de classificação.
+  
+    * **O que o gráfico representa?**
+        * Este gráfico é uma **Matriz de Confusão**, uma ferramenta essencial para avaliar o desempenho de um modelo de classificação (neste caso, para prever diabetes). Ela compara as previsões do modelo com os valores reais.
+          
+        * **Eixos:**
+            * **"Verdadeiro" (eixo Y):** Representa os rótulos reais dos dados (0 para "não diabetes" e 1 para "diabetes").
+            * **"Previsto" (eixo X):** Representa as previsões feitas pelo seu modelo (0 para "não diabetes" e 1 para "diabetes").
+              
+        * **Quadrantes:** Cada quadrante da matriz mostra a contagem de amostras que se encaixam em uma combinação específica de valor real e valor previsto:
+            * **Superior Esquerdo (77): Verdadeiros Negativos (TN)** - O modelo previu corretamente que 77 pacientes **não** tinham diabetes (real = 0, previsto = 0).
+            * **Superior Direito (22): Falsos Positivos (FP)** - O modelo previu incorretamente que 22 pacientes tinham diabetes, quando na verdade **não** tinham (real = 0, previsto = 1). Também conhecido como "Erro Tipo I".
+            * **Inferior Esquerdo (21): Falsos Negativos (FN)** - O modelo previu incorretamente que 21 pacientes **não** tinham diabetes, quando na verdade **tinham** (real = 1, previsto = 0). Também conhecido como "Erro Tipo II".
+              
+            * **Inferior Direito (34): Verdadeiros Positivos (TP)** - O modelo previu corretamente que 34 pacientes **tinham** diabetes (real = 1, previsto = 1).
+              
+    * **Relação com o modelo de Diabetes:**
+        * A matriz mostra como o modelo Random Forest se comportou ao tentar prever a presença ou ausência de diabetes.
+        * É possível ver o balanço entre acertos e erros para ambas as classes (com e sem diabetes).
+          
+    * **Interpretação Prática:**
+        * **Acurácia Global:** (TN + TP) / Total = (77 + 34) / (77 + 22 + 21 + 34) = 111 / 154 $\approx$ 0.72 (72%). Este é um bom ponto de partida, mas outras métricas são importantes.
+        * **Falsos Positivos (FP = 22):** Pacientes saudáveis que foram classificados como diabéticos. No contexto médico, isso pode levar a exames desnecessários e ansiedade.
+        * **Falsos Negativos (FN = 21):** Pacientes diabéticos que foram classificados como saudáveis. Este é um erro mais crítico, pois pode atrasar o diagnóstico e tratamento de uma condição real.
+          
+        * **Importância:** A matriz de confusão é crucial para entender não apenas o quão "preciso" o modelo é em geral (acurácia), mas também os tipos específicos de erros que ele comete, o que é vital para avaliar o impacto das previsões em um cenário real.
+          
+    * **Benefício do uso da Matriz de Confusão:**
+        * Fornece uma análise detalhada dos erros do modelo, indo além de uma simples métrica de acurácia.
+        * Ajuda a identificar se o modelo está tendencioso a um tipo de erro (ex: muitos falsos negativos em um cenário onde isso é mais grave).
+        * Permite calcular outras métricas importantes como Precisão, Recall (Sensibilidade) e F1-Score, que são mais informativas para classes desbalanceadas ou para cenários onde um tipo de erro é mais custoso.
+
  * **Análise e Modelo:**
     * **Engenharia de Dados:** Realizamos a separação clara entre variáveis preditoras e a variável alvo (`Outcome`).
     * **Divisão de Dados:** Os dados foram divididos em conjuntos de treino (80%) e teste (20%) para garantir a robustez e a validação do modelo.
